@@ -1,16 +1,39 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
 interface CardProps {
-  children: ReactNode; // Accepts any React component or elements as children
-  className?: string; // Optional className prop
+  children: React.ReactNode;
+  className?: string;
 }
 
-const Card: React.FC<CardProps> = ({ children, className = "" }) => {
-  return (
-    <div className={`p-4 border rounded-lg shadow-lg ${className}`}>
-      {children} {/* This renders the passed content inside the Card */}
-    </div>
-  );
+const Card = ({ children, className }: CardProps) => {
+  return <div className={`p-4 rounded-lg shadow-md bg-white ${className}`}>{children}</div>;
 };
 
-export default Card;
+interface CardHeaderProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const CardHeader = ({ children, className }: CardHeaderProps) => {
+  return <div className={`pb-2 border-b ${className}`}>{children}</div>;
+};
+
+interface CardTitleProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const CardTitle = ({ children, className }: CardTitleProps) => {
+  return <h2 className={`text-lg font-semibold ${className}`}>{children}</h2>;
+};
+
+interface CardContentProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const CardContent = ({ children, className }: CardContentProps) => {
+  return <div className={`pt-2 ${className}`}>{children}</div>;
+};
+
+export { Card, CardHeader, CardTitle, CardContent };

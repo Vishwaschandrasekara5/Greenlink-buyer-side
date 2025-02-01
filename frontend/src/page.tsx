@@ -1,5 +1,5 @@
 import Button from "./button"
-import Card from "./card"
+import { Card} from "./card";
 import { Thermometer, Droplets, Wind, Car, MapPin, Phone, Mail, HelpCircle } from "lucide-react"
 import dynamic from "next/dynamic"
 
