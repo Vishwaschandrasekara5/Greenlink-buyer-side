@@ -9,17 +9,17 @@ export default function Map() {
 
   useEffect(() => {
     if (!mapRef.current) {
-      // Initialize map
-      const map = L.map("map").setView([7.8731, 80.7718], 8) // Center on Sri Lanka
+     
+      const map = L.map("map").setView([7.8731, 80.7718], 8) 
 
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution: "© OpenStreetMap contributors",
       }).addTo(map)
 
-      // Add container markers
-      const container1 = L.marker([7.9, 80.2]).bindPopup("Container 1").addTo(map)
+     
+      L.marker([7.9, 80.2]).bindPopup("Container 1").addTo(map)
 
-      const container2 = L.marker([7.8, 81.2]).bindPopup("Container 2").addTo(map)
+      L.marker([7.8, 81.2]).bindPopup("Container 2").addTo(map)
 
       mapRef.current = map
     }

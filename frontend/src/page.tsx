@@ -1,9 +1,9 @@
-import Button from "./button"
-import { Card} from "./card";
+import Button from "./components/button"
+import { Card} from "./components/card";
 import { Thermometer, Droplets, Wind, Car, MapPin, Phone, Mail, HelpCircle } from "lucide-react"
 import dynamic from "next/dynamic"
 
-// Import Map component dynamically to avoid SSR issues
+
 const Map = dynamic(() => import("./map"), { ssr: false })
 
 export default function ContainerDashboard() {
@@ -17,9 +17,7 @@ export default function ContainerDashboard() {
             <a href="#" className="hover:text-green-100">
               Catalog
             </a>
-            <a href="#" className="hover:text-green-100">
-              My Containers
-            </a>
+            <a href="/container-dashboard" className="hover:text-green-100">My Containers</a>
             <a href="#" className="hover:text-green-100">
               Profile
             </a>
