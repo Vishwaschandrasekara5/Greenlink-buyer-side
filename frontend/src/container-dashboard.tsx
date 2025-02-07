@@ -9,10 +9,10 @@ const WelcomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">GreenLink</h1>
           <div className="flex gap-6">
-            <Link to="/about" className="hover:text-green-200">About</Link>
+            {/* <Link to="/about" className="hover:text-green-200">About</Link>
             <Link to="/services" className="hover:text-green-200">Services</Link>
             <Link to="/contact" className="hover:text-green-200">Contact</Link>
-            <Link to="/container-dashboard" className="hover:text-green-200">Dashboard</Link>
+            <Link to="/container-dashboard" className="hover:text-green-200">Dashboard</Link> */}
           </div>
         </div>
       </nav>

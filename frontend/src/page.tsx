@@ -2,6 +2,7 @@ import Button from "./components/button"
 import { Card} from "./components/card";
 import { Thermometer, Droplets, Wind, Car, MapPin, Phone, Mail, HelpCircle } from "lucide-react"
 import dynamic from "next/dynamic"
+import { Link } from "react-router-dom";
 
 
 const Map = dynamic(() => import("./map"), { ssr: false })
@@ -17,7 +18,8 @@ export default function ContainerDashboard() {
             <a href="#" className="hover:text-green-100">
               Catalog
             </a>
-            <a href="/container-dashboard" className="hover:text-green-100">My Containers</a>
+            <Link to="/container-dashboard" className="hover:text-green-200">My Containers</Link>
+            <Link to="/order" className="hover:text-green-200">My Orders</Link>
             <a href="#" className="hover:text-green-100">
               Profile
             </a>
