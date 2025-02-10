@@ -47,7 +47,7 @@ export default function VegetablePurchase() {
         <div className="flex gap-4 mb-6">
           <Select
             value={selectedVeg}
-            onChange={(e) => setSelectedVeg(e.target.value)} // Corrected usage
+            onChange={(e) => setSelectedVeg(e.target.value)}
             options={[
               { value: "tomato", label: "Tomato" },
               { value: "potato", label: "Potato" },
